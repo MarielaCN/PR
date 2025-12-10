@@ -1,0 +1,101 @@
+************************************EJECUTAR CON GITHUB*****************************************************
+1- Descargar git
+2- Buscar en la pagina de playwright  la info de CI con GitHub https://playwright.dev/docs/ci-intro
+3- Crear como dice ahi esta ruta en el proyecto .github/workflows/playwright.yml
+   Creo carpeta .GitHub
+   Dentro creo otra workflows
+   Dentro creo el archivo playwright.yml
+   Dentro del archivo copiar el codigo que aparece en la pagina que mencionamos arriba (copiar y pegar en el archico playwright.yml creado)
+
+4- Crear una cuenta en GitHub 
+
+
+✅ Cómo resolver el error “Author identity unknown”
+
+Configura tu nombre de usuario de Git. En PowerShell, ejecuta:
+
+git config --global user.name "Tu Nombre"
+
+
+Ejemplo: git config --global user.name "Marie"
+
+
+Configura tu correo electrónico asociado a GitHub. Usa el mismo correo que tienes en GitHub:
+
+git config --global user.email "tucorreo@gmail.com"
+
+
+Ejemplo: git config --global user.email "marie@example.com"
+
+🔄 Verifica que quedó configurado:
+git config --global --list
+
+
+Deberías ver algo como:
+
+user.name=Marie
+user.email=marie@example.com
+
+*********************************************************
+
+⚠️ Nota
+
+Si deseas que la identidad aplique solo a ese proyecto, no uses --global:
+
+git config user.name "Marie"
+git config user.email "marie@example.com"
+
+
+*****************************************************************
+
+✅ SOLUCIÓN COMPLETA (paso a paso)
+👉 1. Agrega todos los archivos
+git add .
+
+👉 2. Haz el commit
+git commit -m "added github actions"
+
+👉 3. Conecta tu proyecto a GitHub
+
+git remote add PR https://github.com/MarielaCN/PR    -> PR es la carpeta y lo siguiente es la url del repositorio
+
+Puedes verificarlo con:
+
+git remote -v
+
+Debe mostrar algo como:
+
+PR  https://github.com/MarielaCN/PR (fetch)
+PR  https://github.com/MarielaCN/PR (push)
+
+👉 4. Haz el push inicial correctamente
+
+Ejecuta:
+
+git push --set-upstream PR master
+
+
+Esto hará dos cosas:
+
+sube tu rama master a GitHub
+
+deja configurado el upstream para los futuros push
+
+Después de esto, cada push será simplemente:
+
+git push
+
+************************************EJECUTAR CON JENKING*****************************************************
+OPCION 1
+1- Descargar e instalar docker desktop desde https://www.docker.com/products/docker-desktop/
+2- Crear un contenedor con la instalacion de Jenkins (eso esta en: En https://github.com/jenkinsci/docker/blob/master/README.md )
+docker run -p 8080:8080 -p 50000:50000 --restart=on-failure jenkins/jenkins:lts-jdk21
+
+y Tambien queremos instalar el playrigth , necesitamos inclui el CLI
+
+
+
+
+Imagen de playwrit que tare node js y los browsers 
+https://mcr.microsoft.com/en-us/artifact/mar/playwright/about
+

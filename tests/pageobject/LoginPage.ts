@@ -2,6 +2,9 @@ import { Locator, Page } from "@playwright/test"
 
 //creo una clase con el mismo nombre del archivo
 export class LoginPage{
+    checkSuccessfulLogin() {
+        throw new Error("Method not implemented.")
+    }
     // creo variables de tipo Locator 
     private readonly usernameTexbox: Locator
     private readonly passwordTexbox: Locator

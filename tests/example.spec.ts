@@ -7,6 +7,9 @@ test('has title', async ({ page }) => {
   await expect(page).toHaveTitle(/Playwright/);
 });
 
+//Comment to learn git basics
+
+
 test('get started link', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
